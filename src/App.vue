@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       logo_src:"./img/logo.png",
-      app_name:"Make Your Burguer"
+      app_name:"Make Your Burger"
     }
   }
 }
@@ -29,10 +29,6 @@ export default {
  }
 
  .main-container {
-   margin: 50px;
-   min-height: 250px;
- }
- .home {
    margin: 50px;
    min-height: 250px;
  }
