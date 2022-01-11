@@ -21,8 +21,8 @@
                         <option value="maminha">Maminha</option>
                     </select>
                 </div>
-                <div class="input-container">
-                    <label for="opcionais">Selecione os opcionais:</label>
+                <div id="opcionais-container" class="input-container">
+                    <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
                     <div class="checkbox-container">
                         <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
                         <span>Salame</span>
@@ -78,7 +78,45 @@ export default {
 
     #opcionais-container {
         flex-direction: row;
-        flex-wrap: ;
+        flex-wrap: wrap;
     }
 
+    #opcionais-title {
+        width: 100%;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: flex-start;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .checkbox-container span, 
+    .checkbox-container input {
+        width: auto;
+    }
+
+    .checkbox-container span {
+        margin-left: 6px;
+        font-weight: bold;
+    }
+
+    .submit-btn {
+        background-color: #222;
+        color: #fcba03;
+        font-weight: bold;
+        border: 2px solid #222;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .submit-btn:hover {
+        background-color: transparent;
+        color: #222;
+        
+    }
 </style>
