@@ -58,6 +58,7 @@ export default {
             opcionaisdata: null,
             nome: null,
             carne: null,
+            pao: null,
             opcionais: [],
             status: "Solicitado",
             msg: null
@@ -89,7 +90,12 @@ export default {
             const req = await fetch("http://localhost:3000/burgers",{
                 method: "POST",
                 header: { "Content-Type": "application/json" },
-            })
+                body: datajson
+            });
+
+            const res = await req.json();
+
+            console.log(res);
             
         }
     },
